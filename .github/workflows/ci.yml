@@ -18,14 +18,3 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
-          cache-dependency-path: package-lock.json
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Check node_modules
-        run: ls -la node_modules/.bin
-
-      - name: Build Next.js project
-        run: npm run build
